@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getQueryString(name) {
+  let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+  // let 
+  let r = window.location.search.substr(1).match(reg)
+  console.log(r)
+  if (r !== null) {
+    return unescape(r[2])
+  } else {
+    return null
+  }
+}
+    function getQueryString(name) {
+      let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+      let r = window.location.search.substr(1).match(reg)
+      if (r !== null) {
+        return unescape(r[2])
+      } else {
+        return null
+      }
+    }
+    console.log(getQueryString('name'))
+  </script>
+</body>
+</html>
