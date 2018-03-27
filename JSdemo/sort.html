@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = [1, 10, 3, 5, 2]
+    // 升序
+    arr.sort(function(a, b) {
+      return a - b
+    })
+    console.log(arr)
+
+    //降序
+    arr.sort(function(a, b) {
+      return b - a
+    })
+    console.log(arr)
+
+    //乱序
+    arr.sort(function(a, b) {
+      return Math.random() - 0.5
+    })
+    console.log(arr)
+
+    // 根据对象的某个属性进行排序
+    let guang = {
+      name: 'guang',
+      num: '100',
+    }
+    let cheng = {
+      name: 'cheng',
+      num: '99',
+    }
+    let dong = {
+      name: 'dong',
+      num: '98',
+    }
+    arr = [guang, dong, cheng]
+    arr.sort(function(a, b) {
+      return a.num - b.num
+    })
+    console.log(arr)
+  </script>
+</body>
+</html>
